@@ -4,7 +4,7 @@ see real-time results, and manage sports and predictions through an admin dashbo
 Built with clean project structure, database migrations, and extensible
 API tooling (DRF + filtering) to support future features.
 
-# LIVE DEMO 
+# **LIVE DEMO**
 <div align="center">
   <img src="assets/sports_page.png" alt="Home Page" height="500" width="900"/>
   <br/>
