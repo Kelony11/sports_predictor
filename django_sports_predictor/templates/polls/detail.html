@@ -1,0 +1,37 @@
+<!doctype html>
+{% load static %}
+
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+      <link rel="stylesheet" href="{% static 'polls/style.css' %}">
+    <title>Details</title>
+  </head>
+
+  <body class="page-index">
+
+    <form action="{% url 'polls:vote' sport.id %}" method="post">
+    {% csrf_token %}
+    <fieldset>
+        <legend><h1 class="page-text">{{ sport.sport_text }}</h1></legend>
+
+        {% if error_message %}
+            <p><strong>{{ error_message }}</strong></p>
+        {% endif %}
+
+        {% for choice in sport.choice_set.all %}
+            <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+            <label class="page-text" for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
+            <br/>
+        {% endfor %}
+
+    </fieldset>
+
+    <br/>
+
+    <input type="submit" value="Vote">
+    </form>
+
+  </body>
+
+</html>

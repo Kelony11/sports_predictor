@@ -1,0 +1,31 @@
+<!doctype html>
+{% load static %}
+
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="{% static 'polls/style.css' %}">
+    <title>Results</title>
+  </head>
+
+  <body class="page-results">
+
+    <h1 class="page-text">RESULTS: {{ sport.sport_text }}</h1>
+
+    <ul>
+    {% for choice in choices %}
+        <li class="page-text">
+          {{ choice.choice_text }} - {{ choice.percent|floatformat:0 }}%
+          <span class="votes-spacing"> ({{ choice.votes }} vote{{ choice.votes|pluralize }}) </span>
+        </li>
+        <br/>
+    {% endfor %}
+    </ul>
+    <p class="page-text"><b>Total votes: {{ total_votes }}</b></p>
+    <br/>
+
+    <a class="page-text" href="{% url 'polls:detail' sport.id %}">Vote again?</a>
+
+  </body>
+
+</html>

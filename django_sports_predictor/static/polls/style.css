@@ -1,0 +1,30 @@
+
+.page-text {
+  color: white;                 /* readable on grass */
+  background: rgba(0,0,0,0.55); /* dark pill behind text */
+  padding: 6px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.7);
+}
+
+li a:hover {
+  background: rgba(0,0,0,0.75);
+}
+
+.votes-spacing {
+    margin-left: 12px;
+}
+
+/* ONLY index page background */
+.page-index{
+  background: white url("images/index_bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* ONLY results page background */
+.page-results{
+  background: white url("images/results_bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+}

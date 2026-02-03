@@ -1,0 +1,6 @@
+recursive-include django_sports_predictor/templates *
+recursive-include django_sports_predictor/static *
+recursive-include django_sports_predictor/migrations *.py
+
+include README.md
+include LICENSE

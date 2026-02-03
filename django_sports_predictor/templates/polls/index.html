@@ -1,0 +1,31 @@
+<!doctype html>
+<!--This template tag below generates the absolute URL of static files.-->
+{% load static %}
+
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="{% static 'polls/style.css' %}">
+    <title>Home</title>
+  </head>
+
+  <body class="page-index">
+
+    {% if sorted_sport_arr %}
+
+      <ul>
+      {% for sport in sorted_sport_arr %}
+          <li><a class="page-text" href="{% url 'polls:detail' sport.id %}">{{ sport.sport_text }}</a></li>
+          <br/>
+      {% endfor %}
+      </ul>
+
+    {% else %}
+
+      <p>No polls are available.</p>
+
+    {% endif %}
+
+  </body>
+
+</html>

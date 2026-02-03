@@ -1,0 +1,51 @@
+/* =========================
+   DARK MODE: neon lime accent
+   ========================= */
+html[data-theme="dark"]{
+  --accent: #A3E635;
+}
+
+/* Header gradient (dark mode only) */
+html[data-theme="dark"] #header{
+  background: linear-gradient(90deg, #061a2b 0%, #0b4b75 55%, #061a2b 100%);
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+/* Title color uses accent */
+html[data-theme="dark"] #site-name a{
+  color: var(--accent) ;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.55);
+}
+
+/* Section headers */
+html[data-theme="dark"] .module caption,
+html[data-theme="dark"] .module h2,
+html[data-theme="dark"] .inline-group h2{
+  background: rgba(255,255,255,0.08);
+  color: #e5e7eb !important;
+  border-left: 4px solid var(--accent);
+}
+
+/* Links */
+html[data-theme="dark"] a:link,
+html[data-theme="dark"] a:visited{
+  color: var(--accent);
+}
+html[data-theme="dark"] a:hover{
+  filter: brightness(1.1);
+}
+
+/* “Add / Change” links (make them pop) */
+html[data-theme="dark"] .addlink,
+html[data-theme="dark"] .changelink,
+html[data-theme="dark"] .object-tools a{
+  color: var(--accent);
+}
+
+/* =========================
+   LIGHT MODE: GREEN ACCENT
+   ========================= */
+html[data-theme="light"]{
+  --text:   #111827;   /* near-black */
+  --muted:  #374151;
+}
