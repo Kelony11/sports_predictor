@@ -6,11 +6,11 @@ API tooling (DRF + filtering) to support future features.
 
 # LIVE DEMO 
 <div align="center">
-  <img src="assets/sports_page.png" alt="Home Page" width="900"/>
+  <img src="assets/sports_page.png" alt="Home Page" height="500" width="900"/>
   <br/>
-  <img src="assets/predict_page.png" alt="Prediction page" width="900"/>
+  <img src="assets/predict_page.png" alt="Prediction page" height="500" width="900"/>
   <br/> 
-  <img src="assets/results_page.png" alt="Results Page" width="900"/>
+  <img src="assets/results_page.png" alt="Results Page" height="500" width="900"/>
 </div>
 
 ## Key features
